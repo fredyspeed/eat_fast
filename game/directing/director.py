@@ -43,12 +43,13 @@ class Director:
             self._do_outputs(cast)
             self._get_time()
         # guardar en el archivo
-        with open('dog_breeds_reversed.txt', 'w') as writer:
+        with open('score.txt', 'w') as writer:
         # Alternatively you could use
         # writer.writelines(reversed(dog_breeds))
 
         # Write the dog breeds to the file in reversed order
-            writer.write()
+            player = cast.get_first_object("robots")
+            writer.write(self._get_time() + " points: " + str(player.get_points()))
 
 
 
